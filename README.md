@@ -4,6 +4,12 @@ You can use the [editor on GitHub](https://github.com/Elisarchod/Varios/edit/mas
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+
+# Covid 19 epidemic model
+This is an imlitation of an epidemic forcast model that was published 
+by Prof. Michael Beenstock in Covid Economics Papers [GitHub Flavored Markdown](https://cepr.org/content/covid-economics-vetted-and-real-time-papers-0)
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -12,7 +18,8 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 Syntax highlighted code block
 
 # Covid 19 epidemic model
-This is an imlitation of an epidemic forcast model that was published as an academic paper in [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+This is an imlitation of an epidemic forcast model that was published 
+by Prof. Michael Beenstock in Covid Economics Papers [GitHub Flavored Markdown](https://cepr.org/content/covid-economics-vetted-and-real-time-papers-0)
 
 
 [covid model](https://github.com/Elisarchod/Varios/blob/master/Corona%20Model/OLG%20Model%20notebook.ipynb
