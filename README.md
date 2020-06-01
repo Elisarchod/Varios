@@ -11,6 +11,9 @@ by Prof. Michael Beenstock in Covid Economics Papers [GitHub Flavored Markdown](
 - A clasification model using an SVM base and XGBoost algorithm
 - Dataset inteactive analisys
 - Custom scikit learn pipelines
+- Custom loss function 
 
 ### Outlier detection implimintation
 The model is an imlitation of an 
+
+[GitHub Flavored Markdown](https://towardsdatascience.com/publish-data-science-articles-to-the-web-using-jupyter-github-and-kyso-3721b8336946)
