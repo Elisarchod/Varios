@@ -16,4 +16,8 @@ by Prof. Michael Beenstock in Covid Economics Papers [GitHub Flavored Markdown](
 ### Outlier detection implimintation
 The model is an imlitation of an 
 
-[GitHub Flavored Markdown](https://towardsdatascience.com/publish-data-science-articles-to-the-web-using-jupyter-github-and-kyso-3721b8336946)
+[link 1](https://towardsdatascience.com/publish-data-science-articles-to-the-web-using-jupyter-github-and-kyso-3721b8336946)
+
+[link 2](https://www.linkedin.com/feed/update/activity:6669459476778770432)
+
+
