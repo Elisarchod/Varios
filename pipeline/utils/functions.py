@@ -13,7 +13,6 @@ def merge_categories(column, min_records, encode=True):
 
     return merged_column
 
-
 def gradient(predt, y):
     '''Compute the gradient squared log error.'''
     return (np.log1p(predt) - np.log1p(y)) / (predt + 1)
