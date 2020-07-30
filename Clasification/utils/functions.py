@@ -28,4 +28,4 @@ def squared_log(predt, y):
     predt[predt < -1] = -1 + 1e-6
     grad = gradient(predt, y)
     hess = hessian(predt, y)
-    return 0, 0
+    return grad, hess

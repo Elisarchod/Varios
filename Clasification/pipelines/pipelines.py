@@ -16,20 +16,25 @@ from sklearn.model_selection import GridSearchCV
 import re
 
 
+
 class FeatureSelector(BaseEstimator, TransformerMixin):
 
     def __init__(self, features_type):
         self.features_type = features_type
+        self.features_len = int
+        self.features_names = []
 
     def fit(self, X, y=None):
         return self
 
     def transform(self, X, y=None):
-        dypes_dict = {'categorical': ['object'],
-                      'numerical': ['int64', 'float64', 'int']}
+        # dypes_dict = {'categorical': ['object'],
+        #               'numerical': ['int64', 'float64', 'int']}
+        # self.features_names = X.select_dtypes(include=dypes_dict.get(self.features_type)).columns
 
-        _feature_names = X.select_dtypes(include=dypes_dict.get(self.features_type)).columns
-        return X[_feature_names]
+        self.features_names = X.columns
+        self.features_len = len(self.features_names)
+        return X#[self.features_names]
 
 
 class FindOutlier(LocalOutlierFactor):
@@ -37,8 +42,11 @@ class FindOutlier(LocalOutlierFactor):
     def transform(self, X, y=None):
         # pred = self.fit_predict(X)
         lof = self.fit(X)
+        print(X.shape)
         pred = lof.negative_outlier_factor_
-        return np.concatenate([X, pred[:, None]], axis=1)
+        X = np.concatenate([X, pred[:, None]], axis=1)
+        print(X.shape)
+        return X
 
 
 class CategoryMerger(BaseEstimator, TransformerMixin):
@@ -59,32 +67,40 @@ class CategoryMerger(BaseEstimator, TransformerMixin):
         return merged_column
 
     def fit(self, X, y=None):
-        tqdm.pandas(desc='high freq categories ')
+        tqdm.pandas(desc='fit - high freq categories ')
         X.progress_apply(lambda column: self.high_freq_categories(column), axis=0)
         return self
 
     def transform(self, X, y=None):
-
-        print(f'shape pre transform {X.shape}')
-        tqdm.pandas(desc='transform_apply')
+        tqdm.pandas(desc='transform')
         X = X.progress_apply(lambda column: self.merge_other(column),  axis=0)
-        print(f'shape after transform {X.shape}')
         return X.values
 
-
+from sklearn.compose import ColumnTransformer
+from sklearn.compose import make_column_selector as selector
 def pipeline():
-    categorical_pipeline = Pipeline(steps=[('cat_selector', FeatureSelector('categorical')),
-                                           ('merge_categories', CategoryMerger(min_records=5)),
-                                           ('one_hot_encoder', OneHotEncoder(sparse=False))])
 
-    numerical_pipeline = Pipeline(steps=[('num_selector', FeatureSelector('numerical')),
-                                         ('std_scaler', StandardScaler()),
-                                         ('outlier', FindOutlier(n_neighbors=4, metric='chebyshev')),
-                                         # ('feature_selecttor',  SelectKBest(f_classif, k=4)),
-                                         ])
+    numerical_steps = Pipeline(steps=[('num_selector', FeatureSelector('numerical')),
+                                      ('std_scaler', StandardScaler()),
+                                      ('outlier', FindOutlier(n_neighbors=4, metric='chebyshev')),
+                                      # ('feature_selecttor',  SelectKBest(f_classif, k=4)),
+                                      ])
 
-    data_pipeline = FeatureUnion(transformer_list=[('categorical_pipeline', categorical_pipeline),
-                                                   ('numerical_pipeline', numerical_pipeline)])
+    categorical_steps = Pipeline(steps=[('cat_selector', FeatureSelector('categorical')),
+                                        ('merge_categories', CategoryMerger(min_records=5)),
+                                        ('one_hot_encoder', OneHotEncoder(sparse=False))
+                                        ])
+
+    data_pipeline2 = FeatureUnion(transformer_list=[('numerical_pipeline', numerical_steps),
+                                                   ('categorical_pipeline', categorical_steps),
+                                                   ])
+
+
+
+    data_pipeline = ColumnTransformer(transformers=[
+        ('numerical_pipeline', numerical_steps, selector(dtype_exclude="object")),
+        ('categorical_pipeline', categorical_steps, selector(dtype_include="object"))
+    ])
 
     return data_pipeline
 
@@ -97,8 +113,6 @@ def eval_clf(classifiers, X_train, X_test, y_train, y_test):
         print('{} f1 {:0.3f} recall {:0.3f} score'.format(clf_name,
                                                           f1_score(y_test, y_pred, average='weighted'),
                                                           recall_score(y_test, y_pred, average='weighted')))
-
-
         if i == 0:
             rfc_disp = plot_roc_curve(classifier, X_test, y_test, name=clf_name)
             ax = plt.gca()
@@ -109,23 +123,16 @@ def eval_clf(classifiers, X_train, X_test, y_train, y_test):
     plt.rcParams.update({'font.size': 22})
     plt.show()
 
+def convert_X_to_df(data_pipeline, X):
+    categorical_features_names = data_pipeline.named_transformers_['categorical_pipeline'][
+        'cat_selector'].features_names
+    new_categorical_features_names = data_pipeline.named_transformers_['categorical_pipeline'][
+        'one_hot_encoder'].get_feature_names(categorical_features_names)
 
-def grid_search(clf, param_grid, X_train, X_test, y_train, y_test, **kwargs):
-    gscv = GridSearchCV(clf, param_grid, n_jobs=-1, cv=2, scoring=kwargs['scoring'],
-                        refit=kwargs['refit'], verbose=True).fit(X_train, y_train,
-                                                      eval_set=[(X_train, y_train), (X_test, y_test)],
-                                                      early_stopping_rounds=kwargs['early_stopping_rounds'],
-                                                      verbose=kwargs['verbose'])
-    print(gscv.best_params_)
-    print(gscv.best_score_)
-
-    cv_results = gscv.cv_results_.copy()
-
-    [cv_results.pop(x) for x in list(cv_results.keys()) if
-     not re.match(f'mean_|param_classifier__|rank_test_{gscv.refit}', x)]
-    df_cv_results = pd.DataFrame(cv_results).sort_values(f'rank_test_{gscv.refit}')
-    df_cv_results.columns = df_cv_results.columns.str.replace('mean_|test_', '')
-    return gscv, gscv.best_estimator_, df_cv_results.style.bar(color='#d65f5f').format("{:.3f}")
+    numeric_names = data_pipeline.named_transformers_['numerical_pipeline']['num_selector'].features_names.to_list()
+    numeric_names.append('outliers')
+    after_pipeline_columns_names = np.concatenate([numeric_names, new_categorical_features_names])
+    return pd.DataFrame(X, columns=after_pipeline_columns_names)
 
 
 class CustomGridSearch(GridSearchCV):
@@ -142,18 +149,3 @@ class CustomGridSearch(GridSearchCV):
         return  self.best_estimator_, df_cv_results.style.bar(color='#d65f5f').format("{:.3f}")
 
 
-
-
-def grid_search2(clf, param_grid, X_train, X_test, y_train, y_test, **kwargs):
-    gscv = GridSearchCV(clf, param_grid, n_jobs=-1, **kwargs).fit(X_train, y_train,
-                                                      eval_set=[(X_train, y_train), (X_test, y_test)], **kwargs)
-    print(gscv.best_params_)
-    print(gscv.best_score_)
-
-    cv_results = gscv.cv_results_.copy()
-
-    [cv_results.pop(x) for x in list(cv_results.keys()) if
-     not re.match(f'mean_|param_classifier__|rank_test_{gscv.refit}', x)]
-    df_cv_results = pd.DataFrame(cv_results).sort_values(f'rank_test_{gscv.refit}')
-    df_cv_results.columns = df_cv_results.columns.str.replace('mean_|test_', '')
-    return gscv, gscv.best_estimator_, df_cv_results.style.bar(color='#d65f5f').format("{:.3f}")
