@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e3f28243-cfdc-4961-af2f-9ea80dc8f894" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/.ipynb_checkpoints/classification_model-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/.ipynb_checkpoints/classification_python-Copy1-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/.ipynb_checkpoints/classification_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/.ipynb_checkpoints/classification_python-new-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/classification.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/classification_model-Copy1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/classification_model.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/classification_python-Copy1.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/classification_python-new.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/classification_python.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/python_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Classification_Model/python_resource.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.idea/payoneer_ds_position_task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/Exploration-Copy1-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/Exploration-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/Spark pipeline -old-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/classification_model_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/classification_pyspark-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/classification_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/classification_python-new-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/data_exploration-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/payoneer_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/.ipynb_checkpoints/spark-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/COVID-19-Prediction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/__MACOSX/._payoneer_ds_position_task" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/__MACOSX/payoneer_ds_position_task/._table_1.parquet" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/__MACOSX/payoneer_ds_position_task/._table_2.parquet" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/classification_pyspark.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/classification_python.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/classification_python.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/data_exploration.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/pipelines/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/pipelines/python_pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/pipelines/spark_pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/utils/functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task - Copy/utils/visualization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../payoneer_ds_position_task.7z" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/payoneer_ds_position_task.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Exploration-Copy1-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Exploration-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/Spark pipeline -old-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/classification_model_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/classification_pyspark-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/classification_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/classification_python-new-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/data_exploration-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/payoneer_python-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.ipynb_checkpoints/spark-checkpoint.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/COVID-19-Prediction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__MACOSX/._payoneer_ds_position_task" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__MACOSX/payoneer_ds_position_task/._table_1.parquet" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__MACOSX/payoneer_ds_position_task/._table_2.parquet" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classification_pyspark.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classification_python.html.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classification_python.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_exploration.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipelines/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipelines/python_pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pipelines/spark_pipelines.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/visualization.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.ipynb_checkpoints/classification-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../.ipynb_checkpoints/classification-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Corona Model/OLG Model notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Corona_Model/OLG Model notebook.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Corona Model/OLG_model_src.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Corona_Model/OLG_model_src.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Corona Model/countries_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Corona_Model/countries_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Corona Model/jh_hubei_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Corona_Model/jh_hubei_data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Corona Model/stringencyExample.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../Corona_Model/stringencyExample.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ML_Pipelines.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../classification.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../classification.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pipeline.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Classification_Model/pipeline.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1eDHWMbMJjfsHf2w29cdPGGn4Xo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\97254\Desktop\Neta\projects\Payoneer\payoneer_ds_position_task\pipelines" />
+      <recent name="C:\Users\97254\Desktop\Neta\projects\Payoneer\payoneer_ds_position_task\utils" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e3f28243-cfdc-4961-af2f-9ea80dc8f894" name="Default Changelist" comment="" />
+      <created>1593849273699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593849273699</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="579" y="192" key="FileChooserDialogImpl" timestamp="1594304180443">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="579" y="192" key="FileChooserDialogImpl/0.0.1600.900@0.0.1600.900" timestamp="1594304180443" />
+    <state x="301" y="95" key="SettingsEditor" timestamp="1594304160924">
+      <screen x="0" y="0" width="1600" height="900" />
+    </state>
+    <state x="301" y="95" key="SettingsEditor/0.0.1600.900@0.0.1600.900" timestamp="1594304160924" />
+  </component>
+</project>
