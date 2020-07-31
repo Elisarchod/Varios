@@ -3,8 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/Clasification/.ipynb_checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/COVID OLG forcast/.ipynb_checkpoints" />
       <excludeFolder url="file://$MODULE_DIR$/LoOP implementation/.ipynb_checkpoints" />
+      <excludeFolder url="file://$MODULE_DIR$/XGBoost Clasification/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/XGBoost Clasification/.ipynb_checkpoints" />
       <excludeFolder url="file://$MODULE_DIR$/pipeline/.idea" />
       <excludeFolder url="file://$MODULE_DIR$/pipeline/.ipynb_checkpoints" />
     </content>
