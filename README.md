@@ -8,7 +8,7 @@ Here are some templates of my code in order for me to use in my future
 - Custom loss function 
 - SHAP analysis
 
-[jupyter notebook](https://nbviewer.jupyter.org/github/Elisarchod/Varios/blob/7ecbf081765b25ecc556893cf81b9f0386c28219/pipeline/classification_python.ipynb)
+[jupyter notebook](https://nbviewer.jupyter.org/github/Elisarchod/Varios/blob/ad595a591569d5e4bdd8ba164750fbd6325cd1f8/XGBoost%20Clasification/classification_python.ipynb)
 
 ### Covid 19 epidemic forcast model
 This is an imlitation of an epidemic forcast model that was published 

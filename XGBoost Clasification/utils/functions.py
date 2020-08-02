@@ -58,10 +58,13 @@ class CustomGridSearch(GridSearchCV):
         cv_results = self.cv_results_.copy()
 
         [cv_results.pop(x) for x in list(cv_results.keys()) if
-         not re.match(f'mean_|param_classifier__|rank_test_{self.refit}', x)]
+         not re.match(f'mean_|param_classifier__|rank_test_{self.refit}|params', x)]
         df_cv_results = pd.DataFrame(cv_results).sort_values(f'rank_test_{self.refit}')
         df_cv_results.columns = df_cv_results.columns.str.replace('mean_|test_', '')
-        return self.best_estimator_, df_cv_results.style.bar(color='#d65f5f').format("{:.3f}")
+        columns_list = df_cv_results.columns.to_list()
+        columns_list.remove('params')
+        return self.best_estimator_, df_cv_results.style.bar(subset=columns_list, color='#d65f5f', align='mid').hide_index()
+        # return self.best_estimator_, cv_results
 
 
 def gradient(predt, y):

@@ -1,6 +1,6 @@
+import altair as alt
 import numpy as np
 import pandas as pd
-import altair as alt
 from statsmodels.tsa.api import Holt
 
 
@@ -17,6 +17,7 @@ class Parameters:
         self.recovery_rate = recovery_rate
         self.critical_condition_time = critical_condition_time
         self.recovery_time = recovery_time
+
 
 class OLG:
     """

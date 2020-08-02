@@ -4,6 +4,8 @@ from sklearn.neighbors import LocalOutlierFactor
 from sklearn.pipeline import FeatureUnion, Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from tqdm import tqdm
+from sklearn.compose import ColumnTransformer
+from sklearn.compose import make_column_selector as selector
 
 
 class FeatureSelector(BaseEstimator, TransformerMixin):
@@ -66,10 +68,6 @@ class CategoryMerger(BaseEstimator, TransformerMixin):
         return X.values
 
 
-from sklearn.compose import ColumnTransformer
-from sklearn.compose import make_column_selector as selector
-
-
 def pipeline():
     numerical_steps = Pipeline(steps=[('num_selector', FeatureSelector('numerical')),
                                       ('std_scaler', StandardScaler()),
@@ -92,4 +90,3 @@ def pipeline():
     ])
 
     return data_pipeline
-
